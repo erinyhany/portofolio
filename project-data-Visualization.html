@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Data Visualization | Eriny Hany</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="icon" href="ero4.jpg" type="image/x-icon">
+    <style>
+        /* Additional styles for project detail pages */
+        .project-detail-container {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-top: 30px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-detail-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .project-date, .project-category {
+            background: var(--primary-light);
+            color: var(--dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .project-detail-content h2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .project-detail-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .project-detail-content li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .project-links {
+            margin-top: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: var(--section-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-card i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* GitHub button style */
+        .github-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #333;
+            color: white;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .github-btn:hover {
+            background-color: #24292e;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Code snippet style */
+        .code-snippet {
+            background-color: var(--gray-light);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .project-detail-container {
+                padding: 25px;
+            }
+            
+            .project-meta {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index2.html" class="logo">Eriny<span>Hany</span></a>
+                <ul class="nav-links">
+                    <li><a href="index2.html#hero">Home</a></li>
+                    <li><a href="index2.html#about">About</a></li>
+                    <li><a href="index2.html#education">Education</a></li>
+                    <li><a href="index2.html#skills">Skills</a></li>
+                    <li><a href="index2.html#projects">Projects</a></li>
+                    <li><a href="index2.html#contact">Contact</a></li>
+                    <li>
+                        <button class="theme-toggle" aria-label="Toggle dark mode"></button>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Detail Section -->
+    <section id="project-detail" style="padding-top: 150px;">
+        <div class="container">
+            <a href="index2.html#projects" class="btn btn-outline mb-3">Back to Projects</a>
+            
+            <div class="project-detail-container">
+                <div class="project-detail-header">
+                    <h1 class="section-title">Sales Data Visualization</h1>
+                    <div class="project-meta">
+                        <span class="project-date">Completed: May 2025</span>
+                        <span class="project-category">Data Analysis & Visualization</span>
+                    </div>
+                </div>
+                
+                <div class="project-detail-content">
+                    <div class="project-overview">
+                        <h2>Project Overview</h2>
+                        <p>
+                            Developed a comprehensive data analysis and visualization project using Python's pandas and matplotlib 
+                            libraries. The project focuses on analyzing sales data, cleaning and preparing the dataset, and creating 
+                            various visualizations to uncover insights and patterns in the data.
+                        </p>
+                    </div>
+                    
+                    <div class="project-features">
+                        <h2>Key Features</h2>
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <i class="fas fa-database"></i>
+                                <h3>Data Cleaning</h3>
+                                <p>Handled missing values and removed duplicates from the sales dataset</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-chart-bar"></i>
+                                <h3>Multiple Visualizations</h3>
+                                <p>Created various plot types including histograms, line plots, box plots, and density plots</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-search"></i>
+                                <h3>Data Exploration</h3>
+                                <p>Explored dataset statistics, data types, and relationships between variables</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-cogs"></i>
+                                <h3>Python Automation</h3>
+                                <p>Automated the data processing and visualization workflow using Python scripts</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-technologies">
+                        <h2>Technologies Used</h2>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Data Visualization</span>
+                            <span class="tech-tag">CSV Processing</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-implementation">
+                        <h2>Implementation Details</h2>
+                        <p>
+                            The project follows a structured data analysis workflow:
+                        </p>
+                        <ol>
+                            <li><strong>Data Loading:</strong> Importing the sales dataset from a CSV file</li>
+                            <li><strong>Data Exploration:</strong> Examining data types, summary statistics, and initial insights</li>
+                            <li><strong>Data Cleaning:</strong> Handling missing values and removing duplicate entries</li>
+                            <li><strong>Visualization:</strong> Creating multiple plot types to visualize different aspects of the data</li>
+                        </ol>
+                        
+
+                    <div class="project-challenges">
+                        <h2>Challenges & Solutions</h2>
+                        <p>
+                            One of the main challenges was handling the dataset's inconsistencies, including missing values and 
+                            duplicate entries. This was addressed through systematic data cleaning processes using pandas functions 
+                            like <code>dropna()</code> and <code>drop_duplicates()</code>.
+                        </p>
+                        <p>
+                            Another challenge was selecting appropriate visualization types for different aspects of the data. 
+                            This was solved by creating multiple visualization types (histograms, line plots, box plots, bar plots, 
+                            and density plots) to effectively communicate different patterns and relationships in the data.
+                        </p>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="Data_visualization.pdf" class="btn btn-outline mb-3">View Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2023 Eriny Hany. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Same JavaScript as index2.html for theme toggle and navigation
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        const themeToggle = document.querySelector('.theme-toggle');
+        const htmlElement = document.documentElement;
+        
+        const savedTheme = localStorage.getItem('theme') || 
+                           (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        
+        if (savedTheme === 'dark') {
+            htmlElement.setAttribute('data-theme', 'dark');
+        } else {
+            htmlElement.removeAttribute('data-theme');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            if (htmlElement.getAttribute('data-theme') === 'dark') {
+                htmlElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+        
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!localStorage.getItem('theme')) {
+                if (e.matches) {
+                    htmlElement.setAttribute('data-theme', 'dark');
+                } else {
+                    htmlElement.removeAttribute('data-theme');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
